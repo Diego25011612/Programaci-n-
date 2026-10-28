@@ -1,0 +1,30 @@
+package Consultorio;
+public class Especialistas {
+    private String nombreCompleto;
+    private String especialidad;
+    private String cedulaProfesional;
+    private String telefono;
+    private String correo;
+
+    public Especialistas(String nombreCompleto, String especialidad, String cedulaProfesional, String telefono, String correo) {
+        this.nombreCompleto = nombreCompleto;
+        this.especialidad = especialidad;
+        this.cedulaProfesional = cedulaProfesional;
+        this.telefono = telefono;
+        this.correo = correo;
+    }
+
+    public void agregarEspecialista() {
+    }
+
+    public void eliminarEspecialista() {
+    }
+
+    public String getCedulaProfesional() {
+        return cedulaProfesional;
+    }
+
+    public String toString() {
+        return nombreCompleto + " - " + especialidad + " - Céd. " + cedulaProfesional;
+    }
+}
