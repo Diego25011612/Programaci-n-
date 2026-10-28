@@ -1,0 +1,30 @@
+package Consultorio;
+import java.util.*;
+import java.text.SimpleDateFormat;
+public class Cita {
+    private Date fecha;
+    private String hora;
+    private Especialistas especialista;
+    private Pacientes paciente;
+
+    public Cita(Date fecha, String hora, Especialistas especialista, Pacientes paciente) {
+        this.fecha = fecha;
+        this.hora = hora;
+        this.especialista = especialista;
+        this.paciente = paciente;
+    }
+
+    public void agendarCita() {
+    }
+
+    public void cancelarCita() {
+    }
+
+    public void modificarCita() {
+    }
+
+    public String toString() {
+        return "Cita " + new SimpleDateFormat("dd/MM/yyyy").format(fecha) + " " + hora
+            + " | " + especialista.getCedulaProfesional() + " | " + paciente.getNombre();
+    }
+}
