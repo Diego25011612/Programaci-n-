@@ -1,0 +1,30 @@
+package Consultorio;
+import java.util.*;
+import java.text.SimpleDateFormat;
+public class Pacientes {
+    private String nombre;
+    private String telefono;
+    private Date fechaNacimiento;
+    private String direccion;
+
+    public Pacientes(String nombre, String telefono, Date fechaNacimiento, String direccion) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+    }
+
+    public void añadirPaciente() {
+    }
+
+    public void eliminarPaciente() {
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String toString() {
+        return nombre + " - nac. " + new SimpleDateFormat("dd/MM/yyyy").format(fechaNacimiento) + " - " + telefono;
+    }
+}
