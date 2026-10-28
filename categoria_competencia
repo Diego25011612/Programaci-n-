@@ -1,0 +1,20 @@
+package Competencia;
+public class Categoria {
+    private String nombre;
+    private float distancia;
+    private String genero;
+
+    public Categoria(String nombre, float distancia, String genero) {
+        this.nombre = nombre;
+        this.distancia = distancia;
+        this.genero = genero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String toString() {
+        return nombre + " | " + distancia + " km | " + genero;
+    }
+}
