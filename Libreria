@@ -1,0 +1,40 @@
+package Libreria;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+public class libro {
+    private String titulo;
+    private String autor;
+    private Date anioDePublicacion;
+    private String edicion;
+    private String editorial;
+    private int ejemplaresExistentes;
+
+    public libro(String titulo, String autor, Date anioDePublicacion, String edicion, String editorial, int ejemplaresExistentes) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anioDePublicacion = anioDePublicacion;
+        this.edicion = edicion;
+        this.editorial = editorial;
+        this.ejemplaresExistentes = ejemplaresExistentes;
+    }
+
+    public void agregarEjemplares(int cantidad) {
+        if (cantidad > 0) {
+            this.ejemplaresExistentes += cantidad;
+        }
+    }
+
+    public void retirarEjemplar(int cantidad) {
+        if (cantidad > 0 && this.ejemplaresExistentes >= cantidad) {
+            this.ejemplaresExistentes -= cantidad;
+        }
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String toString() {
+        return titulo + " (" + new SimpleDateFormat("yyyy").format(anioDePublicacion) + ") - " + autor + " - " + ejemplaresExistentes + " ej.";
+    }
+}
