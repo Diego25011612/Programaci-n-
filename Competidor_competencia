@@ -1,0 +1,25 @@
+package Competencia;
+public class Competidor {
+    private int numero;
+    private String nombreCompleto;
+    private String genero;
+    private Resultado resultado;
+
+    public Competidor(int numero, String nombreCompleto, String genero) {
+        this.numero = numero;
+        this.nombreCompleto = nombreCompleto;
+        this.genero = genero;
+    }
+
+    public void registrarResultado(boolean termino, String tiempo, boolean top10) {
+        this.resultado = new Resultado(termino, tiempo, top10);
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String toString() {
+        return "#" + numero + " " + nombreCompleto + " (" + genero + ")" + (resultado != null ? " -> " + resultado : " -> sin resultado");
+    }
+}
