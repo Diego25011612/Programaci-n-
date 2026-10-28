@@ -1,0 +1,20 @@
+package Competencia;
+public class Resultado {
+    private boolean termino;
+    private String tiempo;
+    private boolean top10;
+
+    public Resultado(boolean termino, String tiempo, boolean top10) {
+        this.termino = termino;
+        this.tiempo = tiempo;
+        this.top10 = top10;
+    }
+
+    public boolean isTermino() {
+        return termino;
+    }
+
+    public String toString() {
+        return (termino ? "Culminó en " + tiempo : "No culminó") + " | Top 10: " + (top10 ? "Sí" : "No");
+    }
+}
