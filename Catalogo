@@ -1,0 +1,22 @@
+package Libreria;
+import java.util.ArrayList;
+import java.util.List;
+public class catalogo {
+    private List<libro> libros;
+
+    public catalogo() {
+        this.libros = new ArrayList<>();
+    }
+
+    public void agregarLibro(libro libro) {
+        libros.add(libro);
+    }
+
+    public void eliminarLibro(String titulo) {
+        libros.removeIf(l -> l.getTitulo().equalsIgnoreCase(titulo));
+    }
+
+    public List<libro> listarLibros() {
+        return libros;
+    }
+}
