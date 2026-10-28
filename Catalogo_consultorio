@@ -1,0 +1,28 @@
+package Consultorio;
+import java.util.ArrayList;
+import java.util.List;
+public class Catalogo {
+    private List<Especialistas> especialistas;
+    private List<Pacientes> pacientes;
+
+    public Catalogo() {
+        this.especialistas = new ArrayList<>();
+        this.pacientes = new ArrayList<>();
+    }
+
+    public void agregarEspecialistas() {
+        // Lógica de catálogo para especialistas
+    }
+
+    public void eliminarEspecialistas() {
+        // Lógica de catálogo para especialistas
+    }
+
+    public void añadirPaciente() {
+        // Lógica de catálogo para pacientes
+    }
+
+    public void eliminarPaciente() {
+        // Lógica de catálogo para pacientes
+    }
+}
