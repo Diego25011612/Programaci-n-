@@ -1,0 +1,44 @@
+package Competencia;
+import java.util.ArrayList;
+import java.util.List;
+public class GestorCompetencia {
+    private List<Categoria> listaCategoria;
+    private List<Competidor> listaCompetidores;
+    private int contador;
+
+    public GestorCompetencia() {
+        this.listaCategoria = new ArrayList<>();
+        this.listaCompetidores = new ArrayList<>();
+        this.contador = 0;
+    }
+
+    public void agregarCategoria(Categoria categoria) {
+        listaCategoria.add(categoria);
+    }
+
+    public void eliminarCategorias(String nombre) {
+        listaCategoria.removeIf(c -> c.getNombre().equalsIgnoreCase(nombre));
+    }
+
+    public void agregarCompetidor(String nombreCompleto, String genero) {
+        contador++;
+        listaCompetidores.add(new Competidor(contador, nombreCompleto, genero));
+    }
+
+    public void eliminarCompetidor(int numero) {
+        listaCompetidores.removeIf(c -> c.getNumero() == numero);
+    }
+
+    public Competidor buscarCompetidor(int numero) {
+        for (Competidor c : listaCompetidores) {
+            if (c.getNumero() == numero) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public String toString() {
+        return listaCategoria.size() + " categorías, " + listaCompetidores.size() + " competidores";
+    }
+}
